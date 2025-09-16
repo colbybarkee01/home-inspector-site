@@ -26,35 +26,15 @@
     @media (max-width: 640px) {
       .callbar { position: sticky; bottom: 0; left: 0; right: 0; }
     }
-    .testimonial-scroll::-webkit-scrollbar { height: 8px; }
-    .testimonial-scroll::-webkit-scrollbar-thumb { background: #ccc; border-radius: 4px; }
+    .scrolling-wrapper { display: flex; overflow-x: auto; gap: 1rem; scroll-snap-type: x mandatory; }
+    .testimonial { flex: 0 0 auto; scroll-snap-align: start; min-width: 280px; }
   </style>
-
-  <!-- LocalBusiness Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "HomeAndConstructionBusiness",
-    "name": "Barkee Inspection Services",
-    "image": "https://colbybarkee01.github.io/home-inspector-site/og-image.jpg",
-    "telephone": "+1-360-907-2800",
-    "areaServed": "Vancouver WA, Portland OR Metro, Clark County, Camas, Battle Ground, Ridgefield, Beaverton, Hillsboro, Tigard, Tualatin, Gresham, West Linn, Lake Oswego, Oregon City, Washougal, La Center, Woodland, Stevenson, Longview, Kelso, Milwaukie, Wilsonville, Woodburn, Molalla, Clackamas, Gladstone, Happy Valley, Forest Grove",
-    "url": "https://colbybarkee01.github.io/home-inspector-site/",
-    "description": "Master-Certified Home and Property Inspections throughout Vancouver WA and Portland OR Metro. Licensed in WA & OR.",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Vancouver",
-      "addressRegion": "WA",
-      "addressCountry": "US"
-    }
-  }
-  </script>
 </head>
 <body class="bg-slate-50 text-slate-900">
   <!-- Top Alert -->
   <div class="bg-emerald-600 text-white text-center text-sm py-2">
     <strong>Call or text: </strong>
-    <a href="tel:+13609072800" class="underline font-semibold">(360) 907‑2800</a>
+    <a href="tel:+13609072800" class="underline font-semibold">(360) 907-2800</a>
   </div>
 
   <!-- Header -->
@@ -82,7 +62,7 @@
         <h1 class="text-4xl md:text-5xl font-extrabold leading-tight tracking-tight">Master-Certified Home Inspections<br><span class="text-emerald-700">Serving WA & OR for 25+ Years</span></h1>
         <p class="mt-5 text-lg text-slate-700">Licensed in Washington & Oregon. Trusted by homeowners and agents. Clear reports, same-day delivery, and practical guidance.</p>
         <div class="mt-8 flex flex-col sm:flex-row gap-3">
-          <a href="tel:+13609072800" class="inline-flex items-center justify-center rounded-xl bg-emerald-600 text-white px-5 py-3 font-semibold shadow hover:bg-emerald-700">📞 Call (360) 907‑2800</a>
+          <a href="tel:+13609072800" class="inline-flex items-center justify-center rounded-xl bg-emerald-600 text-white px-5 py-3 font-semibold shadow hover:bg-emerald-700">📞 Call (360) 907-2800</a>
           <a href="mailto:Doug@BarkeeInspect.com" class="inline-flex items-center justify-center rounded-xl bg-white border border-slate-300 px-5 py-3 font-semibold hover:border-slate-400">✉️ Email Doug@BarkeeInspect.com</a>
         </div>
       </div>
@@ -92,38 +72,60 @@
     </div>
   </section>
 
- <!-- Testimonials (horizontally scrollable) -->
-<section id="testimonials" class="py-16 bg-white border-y border-slate-200">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6">
-    <h2 class="text-3xl font-bold tracking-tight">Client Testimonials</h2>
-    <p class="mt-2 text-slate-600">A few notes from happy homeowners and agents.</p>
-
-    <div class="mt-8 overflow-x-auto [-webkit-overflow-scrolling:touch] scrollbar-thin">
-      <div class="flex gap-4 min-w-max">
-        <!-- card -->
-        <figure class="card w-80 flex-shrink-0 rounded-2xl border border-slate-200 bg-white p-5">
-          <blockquote class="text-slate-800">“Doug was thorough and professional. The report was clear and arrived the same day.”</blockquote>
-          <figcaption class="mt-4 text-sm text-slate-500">— J. Miller (Vancouver, WA)</figcaption>
-        </figure>
-
-        <figure class="card w-80 flex-shrink-0 rounded-2xl border border-slate-200 bg-white p-5">
-          <blockquote class="text-slate-800">“As an agent, I’ve trusted Barkee for years. Clients love the on-site walkthrough.”</blockquote>
-          <figcaption class="mt-4 text-sm text-slate-500">— K. Ramirez, Broker</figcaption>
-        </figure>
-
-        <figure class="card w-80 flex-shrink-0 rounded-2xl border border-slate-200 bg-white p-5">
-          <blockquote class="text-slate-800">“Caught a moisture issue the seller missed—saved us thousands.”</blockquote>
-          <figcaption class="mt-4 text-sm text-slate-500">— S. Patel (Portland, OR)</figcaption>
-        </figure>
-
-        <!-- duplicate the <figure> block above to add more -->
+  <!-- Services -->
+  <section id="services" class="py-16 bg-white border-y border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <h2 class="text-3xl font-bold tracking-tight">Services</h2>
+      <p class="mt-2 text-slate-600">Thorough inspections for residential, multi-family, and commercial properties. Licensed in WA & OR.</p>
+      <div class="mt-8 grid md:grid-cols-2 gap-6">
+        <div class="card bg-slate-50 p-6 rounded-2xl border border-slate-200">
+          <h3 class="font-semibold text-lg">🏠 Full Home Inspection</h3>
+          <p class="mt-2 text-slate-700">2.5–4 hour visual inspection of all accessible systems & components. Includes summary of structural pests.</p>
+        </div>
+        <div class="card bg-slate-50 p-6 rounded-2xl border border-slate-200">
+          <h3 class="font-semibold text-lg">🆕 New Home Warranty Inspection</h3>
+          <p class="mt-2 text-slate-700">Review before your builder warranty expires. Independent third-party inspection for peace of mind.</p>
+        </div>
+        <div class="card bg-slate-50 p-6 rounded-2xl border border-slate-200">
+          <h3 class="font-semibold text-lg">🐜 Structural Pests Inspection</h3>
+          <p class="mt-2 text-slate-700">Exterior, crawl space, and interior inspections for insect or fungi attack. Fully documented with photos.</p>
+        </div>
+        <div class="card bg-slate-50 p-6 rounded-2xl border border-slate-200">
+          <h3 class="font-semibold text-lg">🏘 Manufactured & Multi-Family</h3>
+          <p class="mt-2 text-slate-700">Certified inspections for manufactured homes & multi-family properties. Tailored to unique requirements.</p>
+        </div>
+        <div class="card bg-slate-50 p-6 rounded-2xl border border-slate-200">
+          <h3 class="font-semibold text-lg">🏢 Commercial Structures</h3>
+          <p class="mt-2 text-slate-700">Certified inspections for commercial facilities. Experience with complex, large-scale properties.</p>
+        </div>
+        <div class="card bg-slate-50 p-6 rounded-2xl border border-slate-200">
+          <h3 class="font-semibold text-lg">🔄 Re-Inspections</h3>
+          <p class="mt-2 text-slate-700">Follow-up inspections after repairs or previous reports to confirm corrected conditions.</p>
+        </div>
       </div>
     </div>
+  </section>
 
-    <div class="mt-6 text-sm text-slate-500">Tip: swipe/drag to see more.</div>
-  </div>
-</section>
-
+  <!-- Testimonials -->
+  <section id="testimonials" class="py-16 bg-slate-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <h2 class="text-3xl font-bold tracking-tight">Testimonials</h2>
+      <div class="mt-8 scrolling-wrapper pb-4">
+        <div class="testimonial card bg-white p-6 rounded-2xl border border-slate-200 shadow">
+          <p class="text-slate-700 italic">“Doug was thorough and professional. His report gave us confidence in buying our first home.”</p>
+          <p class="mt-3 text-sm font-semibold">– Happy Client</p>
+        </div>
+        <div class="testimonial card bg-white p-6 rounded-2xl border border-slate-200 shadow">
+          <p class="text-slate-700 italic">“Highly recommend! Prompt, knowledgeable, and very clear in explaining findings.”</p>
+          <p class="mt-3 text-sm font-semibold">– Realtor Partner</p>
+        </div>
+        <div class="testimonial card bg-white p-6 rounded-2xl border border-slate-200 shadow">
+          <p class="text-slate-700 italic">“We’ve used Barkee Inspections twice. Every time, Doug’s expertise saved us from costly surprises.”</p>
+          <p class="mt-3 text-sm font-semibold">– Repeat Client</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Book / Contact -->
   <section id="booking" class="py-16 bg-white border-y border-slate-200">
@@ -132,8 +134,8 @@
       <p class="mt-2 text-slate-600">Please contact Doug directly to schedule your inspection:</p>
 
       <div class="mt-8 grid sm:grid-cols-3 gap-4">
-        <a href="tel:+13609072800" class="inline-flex items-center justify-center rounded-2xl bg-emerald-600 text-white px-5 py-4 font-semibold shadow hover:bg-emerald-700">📞 Call (360) 907‑2800</a>
-        <a href="sms:+13609072800" class="inline-flex items-center justify-center rounded-2xl bg-white border border-slate-300 px-5 py-4 font-semibold hover:border-slate-400">💬 Text (360) 907‑2800</a>
+        <a href="tel:+13609072800" class="inline-flex items-center justify-center rounded-2xl bg-emerald-600 text-white px-5 py-4 font-semibold shadow hover:bg-emerald-700">📞 Call (360) 907-2800</a>
+        <a href="sms:+13609072800" class="inline-flex items-center justify-center rounded-2xl bg-white border border-slate-300 px-5 py-4 font-semibold hover:border-slate-400">💬 Text (360) 907-2800</a>
         <a href="mailto:Doug@BarkeeInspect.com" class="inline-flex items-center justify-center rounded-2xl bg-white border border-slate-300 px-5 py-4 font-semibold hover:border-slate-400">✉️ Email Doug@BarkeeInspect.com</a>
       </div>
     </div>
@@ -145,7 +147,7 @@
       <div>
         <h3 class="font-semibold">Contact</h3>
         <p class="mt-2 text-slate-700">
-          Phone/Text: <a class="font-semibold text-emerald-700" href="tel:+13609072800">(360) 907‑2800</a><br/>
+          Phone/Text: <a class="font-semibold text-emerald-700" href="tel:+13609072800">(360) 907-2800</a><br/>
           Email: <a class="underline" href="mailto:Doug@BarkeeInspect.com">Doug@BarkeeInspect.com</a>
         </p>
       </div>
