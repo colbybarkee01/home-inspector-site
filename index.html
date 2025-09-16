@@ -107,25 +107,77 @@
   </section>
 
   <!-- Testimonials -->
-  <section id="testimonials" class="py-16 bg-slate-50">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <h2 class="text-3xl font-bold tracking-tight">Testimonials</h2>
-      <div class="mt-8 scrolling-wrapper pb-4">
-        <div class="testimonial card bg-white p-6 rounded-2xl border border-slate-200 shadow">
-          <p class="text-slate-700 italic">“Doug was thorough and professional. His report gave us confidence in buying our first home.”</p>
-          <p class="mt-3 text-sm font-semibold">– Happy Client</p>
-        </div>
-        <div class="testimonial card bg-white p-6 rounded-2xl border border-slate-200 shadow">
-          <p class="text-slate-700 italic">“Highly recommend! Prompt, knowledgeable, and very clear in explaining findings.”</p>
-          <p class="mt-3 text-sm font-semibold">– Realtor Partner</p>
-        </div>
-        <div class="testimonial card bg-white p-6 rounded-2xl border border-slate-200 shadow">
-          <p class="text-slate-700 italic">“We’ve used Barkee Inspections twice. Every time, Doug’s expertise saved us from costly surprises.”</p>
-          <p class="mt-3 text-sm font-semibold">– Repeat Client</p>
-        </div>
+<section id="testimonials" class="py-16 bg-white">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="flex items-baseline justify-between gap-4">
+      <h2 class="text-3xl font-bold tracking-tight">What Clients Say</h2>
+      <div class="hidden sm:flex gap-2">
+        <button id="tPrev" class="rounded-lg border border-slate-300 px-3 py-2 hover:bg-slate-50">◀</button>
+        <button id="tNext" class="rounded-lg border border-slate-300 px-3 py-2 hover:bg-slate-50">▶</button>
       </div>
     </div>
-  </section>
+
+    <!-- scroller -->
+    <div class="relative mt-6 group">
+      <div id="tStrip"
+           class="flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4 -mx-4 px-4"
+           style="scrollbar-width: thin;">
+        <!-- card -->
+        <article class="min-w-[280px] max-w-sm snap-start bg-slate-50 border border-slate-200 rounded-2xl p-5 card">
+          <p class="text-slate-800">“Doug was incredibly thorough and explained everything in plain English. Report delivered the same day.”</p>
+          <div class="mt-3 text-sm text-slate-500">— Melissa P., Vancouver</div>
+        </article>
+
+        <article class="min-w-[280px] max-w-sm snap-start bg-slate-50 border border-slate-200 rounded-2xl p-5 card">
+          <p class="text-slate-800">“Showed up early, checked places I didn’t know existed, and saved us thousands in repairs.”</p>
+          <div class="mt-3 text-sm text-slate-500">— Andrew C., Portland</div>
+        </article>
+
+        <article class="min-w-[280px] max-w-sm snap-start bg-slate-50 border border-slate-200 rounded-2xl p-5 card">
+          <p class="text-slate-800">“We’ve used Barkee Inspection Services for three homes. Consistent, detailed, and honest.”</p>
+          <div class="mt-3 text-sm text-slate-500">— Nguyen Family, Camas</div>
+        </article>
+
+        <article class="min-w-[280px] max-w-sm snap-start bg-slate-50 border border-slate-200 rounded-2xl p-5 card">
+          <p class="text-slate-800">“As an agent, I recommend Doug to my clients. Clear reports with photos and practical advice.”</p>
+          <div class="mt-3 text-sm text-slate-500">— J. Roberts, Broker</div>
+        </article>
+
+        <article class="min-w-[280px] max-w-sm snap-start bg-slate-50 border border-slate-200 rounded-2xl p-5 card">
+          <p class="text-slate-800">“He found a crawlspace moisture issue the seller fixed before closing. Huge relief.”</p>
+          <div class="mt-3 text-sm text-slate-500">— Priya S., Ridgefield</div>
+        </article>
+
+        <article class="min-w-[280px] max-w-sm snap-start bg-slate-50 border border-slate-200 rounded-2xl p-5 card">
+          <p class="text-slate-800">“Fast scheduling, professional, and the report made negotiations straightforward.”</p>
+          <div class="mt-3 text-sm text-slate-500">— Marco D., Beaverton</div>
+        </article>
+
+        <article class="min-w-[280px] max-w-sm snap-start bg-slate-50 border border-slate-200 rounded-2xl p-5 card">
+          <p class="text-slate-800">“Commercial inspection was detailed and on point. Helped us plan maintenance.”</p>
+          <div class="mt-3 text-sm text-slate-500">— Brightside Coffee, PDX</div>
+        </article>
+      </div>
+
+      <!-- mobile nudge -->
+      <div class="sm:hidden mt-3 text-xs text-slate-500">Swipe to see more →</div>
+    </div>
+
+    <div class="mt-8">
+      <a href="#share-review" class="inline-flex items-center rounded-xl bg-emerald-600 text-white px-4 py-2 font-semibold shadow hover:bg-emerald-700">
+        Write a Review
+      </a>
+    </div>
+  </div>
+</section>
+
+<script>
+  // simple arrow controls
+  const strip = document.getElementById('tStrip');
+  document.getElementById('tPrev')?.addEventListener('click', () => strip.scrollBy({left: -360, behavior: 'smooth'}));
+  document.getElementById('tNext')?.addEventListener('click', () => strip.scrollBy({left: 360, behavior: 'smooth'}));
+</script>
+
 
   <!-- Book / Contact -->
   <section id="booking" class="py-16 bg-white border-y border-slate-200">
