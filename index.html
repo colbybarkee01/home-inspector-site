@@ -92,26 +92,38 @@
     </div>
   </section>
 
-  <!-- Testimonials -->
-  <section id="testimonials" class="py-16 bg-slate-50 border-y border-slate-200">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <h2 class="text-3xl font-bold tracking-tight mb-8">Client Testimonials</h2>
-      <div class="flex gap-6 overflow-x-auto testimonial-scroll pb-4">
-        <div class="min-w-[300px] max-w-sm bg-white rounded-xl p-6 shadow card">
-          <p class="text-slate-700 italic">“Doug was incredibly thorough and professional. The report was clear and easy to understand.”</p>
-          <p class="mt-3 font-semibold">– Sarah L.</p>
-        </div>
-        <div class="min-w-[300px] max-w-sm bg-white rounded-xl p-6 shadow card">
-          <p class="text-slate-700 italic">“We’ve used Barkee Inspections twice now. Excellent service both times. Highly recommend.”</p>
-          <p class="mt-3 font-semibold">– Michael R.</p>
-        </div>
-        <div class="min-w-[300px] max-w-sm bg-white rounded-xl p-6 shadow card">
-          <p class="text-slate-700 italic">“Doug’s experience really shows. He explained everything patiently and gave us peace of mind.”</p>
-          <p class="mt-3 font-semibold">– Amanda K.</p>
-        </div>
+ <!-- Testimonials (horizontally scrollable) -->
+<section id="testimonials" class="py-16 bg-white border-y border-slate-200">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <h2 class="text-3xl font-bold tracking-tight">Client Testimonials</h2>
+    <p class="mt-2 text-slate-600">A few notes from happy homeowners and agents.</p>
+
+    <div class="mt-8 overflow-x-auto [-webkit-overflow-scrolling:touch] scrollbar-thin">
+      <div class="flex gap-4 min-w-max">
+        <!-- card -->
+        <figure class="card w-80 flex-shrink-0 rounded-2xl border border-slate-200 bg-white p-5">
+          <blockquote class="text-slate-800">“Doug was thorough and professional. The report was clear and arrived the same day.”</blockquote>
+          <figcaption class="mt-4 text-sm text-slate-500">— J. Miller (Vancouver, WA)</figcaption>
+        </figure>
+
+        <figure class="card w-80 flex-shrink-0 rounded-2xl border border-slate-200 bg-white p-5">
+          <blockquote class="text-slate-800">“As an agent, I’ve trusted Barkee for years. Clients love the on-site walkthrough.”</blockquote>
+          <figcaption class="mt-4 text-sm text-slate-500">— K. Ramirez, Broker</figcaption>
+        </figure>
+
+        <figure class="card w-80 flex-shrink-0 rounded-2xl border border-slate-200 bg-white p-5">
+          <blockquote class="text-slate-800">“Caught a moisture issue the seller missed—saved us thousands.”</blockquote>
+          <figcaption class="mt-4 text-sm text-slate-500">— S. Patel (Portland, OR)</figcaption>
+        </figure>
+
+        <!-- duplicate the <figure> block above to add more -->
       </div>
     </div>
-  </section>
+
+    <div class="mt-6 text-sm text-slate-500">Tip: swipe/drag to see more.</div>
+  </div>
+</section>
+
 
   <!-- Book / Contact -->
   <section id="booking" class="py-16 bg-white border-y border-slate-200">
