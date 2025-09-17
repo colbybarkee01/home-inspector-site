@@ -54,9 +54,9 @@ home-inspector-site/
    git clone https://github.com/colbybarkee01/home-inspector-site.git
    cd home-inspector-site
    ```
-   2. Open index.html in your browser to preview locally.
+2. Open index.html in your browser to preview locally.
   
-   3. Push changes to main — site automatically updates via GitHub Pages.
+3. Push changes to main — site automatically updates via GitHub Pages.
   
 ---
 
