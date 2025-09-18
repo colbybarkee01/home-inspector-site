@@ -50,23 +50,49 @@
   </div>
 
   <!-- Header -->
-  <header class="bg-white/90 backdrop-blur sticky top-0 z-40 border-b border-slate-200">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
-      <a href="#top" class="flex items-center gap-3" aria-label="Go to top">
-       <img src="assets/logo-barkee.png" alt="Barkee logo" class="w-17 h-14" />
-        <span class="font-bold tracking-tight">Barkee Inspection Services</span>
-      </a>
-      <nav class="hidden md:flex items-center gap-6 text-sm">
-        <a href="#services" class="hover:text-emerald-700">Services</a>
-        <a href="#testimonials" class="hover:text-emerald-700">Testimonials</a>
-        <a href="#booking" class="hover:text-emerald-700">Book</a>
-        <a href="#about" class="hover:text-emerald-700">About</a>
-      </nav>
-      
+<header class="bg-white/90 backdrop-blur sticky top-0 z-40 border-b border-slate-200">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+    <!-- Logo + Brand -->
+    <a href="#top" class="flex items-center gap-3" aria-label="Go to top">
+      <img src="assets/logo-barkee.png" alt="Barkee logo" class="w-17 h-14" />
+      <span class="font-bold tracking-tight">Barkee Inspection Services</span>
+    </a>
 
-      <a href="tel:+13609072800" class="hidden md:inline-flex items-center rounded-xl bg-emerald-600 text-white px-4 py-2 font-semibold shadow hover:bg-emerald-700">Call Now</a>
-    </div>
-  </header>
+    <!-- Desktop nav -->
+    <nav class="hidden md:flex items-center gap-6 text-sm">
+      <a href="#services" class="hover:text-emerald-700">Services</a>
+      <a href="#testimonials" class="hover:text-emerald-700">Testimonials</a>
+      <a href="#booking" class="hover:text-emerald-700">Book</a>
+      <a href="#about" class="hover:text-emerald-700">About</a>
+    </nav>
+
+    <!-- Mobile menu button -->
+    <button
+      id="menuBtn"
+      class="md:hidden inline-flex items-center justify-center rounded-lg p-2 border border-slate-300 text-slate-700 hover:bg-slate-100"
+      aria-controls="mobileMenu"
+      aria-expanded="false"
+      aria-label="Open menu"
+      type="button"
+    >
+      <!-- Hamburger icon -->
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile menu panel -->
+  <div id="mobileMenu" class="md:hidden hidden bg-white border-t border-slate-200">
+    <nav class="max-w-6xl mx-auto px-4 sm:px-6 py-3 grid gap-1 text-sm">
+      <a href="#services" class="py-2 hover:text-emerald-700">Services</a>
+      <a href="#testimonials" class="py-2 hover:text-emerald-700">Testimonials</a>
+      <a href="#booking" class="py-2 hover:text-emerald-700">Book</a>
+      <a href="#about" class="py-2 hover:text-emerald-700">About</a>
+    </nav>
+  </div>
+</header>
+
 
   <!-- Hero -->
   <section id="top" class="bg-gradient-to-b from-white to-slate-50">
@@ -271,8 +297,18 @@
     <a href="tel:+13609072800" class="inline-flex items-center rounded-xl bg-emerald-600 text-white px-4 py-2 font-semibold shadow">Call</a>
   </div>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+ <script>
+  const menuToggle = document.getElementById("menu-toggle");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  menuToggle.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+</script>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
+
