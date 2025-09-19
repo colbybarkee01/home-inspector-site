@@ -299,6 +299,14 @@
     <div class="max-w-6xl mx-auto px-4 sm:px-6 mt-10 text-xs text-slate-500">© <span id="year"></span> Barkee Inspection Services. All rights reserved.</div>
   </footer>
 
+<script>
+  const d = new Date();
+  const fmt = d.toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' });
+  const el = document.getElementById('updated-date');
+  if (el) el.textContent = fmt;
+</script>
+
+
   <!-- Mobile Call Bar -->
   <div class="callbar md:hidden bg-white/95 backdrop-blur border-t border-slate-200 p-3 flex items-center justify-between">
     <span class="text-sm">Call now for availability.</span>
